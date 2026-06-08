@@ -25,7 +25,7 @@ export default function FilterBar({ filter, setFilter, onClearCompleted, complet
             className={clsx(
               'px-4 py-1.5 rounded-lg text-sm font-medium transition',
               filter === f.value
-                ? 'bg-white text-indigo-600 shadow-sm'
+                ? 'bg-white text-red-600 shadow-sm'
                 : 'text-gray-500 hover:text-gray-700'
             )}
           >

@@ -31,12 +31,12 @@ export default function AddTodoForm({ onAdd }: AddTodoFormProps) {
           value={text}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setText(e.target.value)}
           placeholder="Add a new task..."
-          className="flex-1 border border-gray-200 rounded-xl px-4 py-3 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition"
+          className="flex-1 border border-gray-200 rounded-xl px-4 py-3 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition"
         />
         <button
           type="submit"
           disabled={!text.trim()}
-          className="bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed text-white px-5 py-3 rounded-xl font-semibold flex items-center gap-2 transition"
+          className="bg-red-600 hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed text-white px-5 py-3 rounded-xl font-semibold flex items-center gap-2 transition"
         >
           <Plus size={18} />
           Add
@@ -52,7 +52,7 @@ export default function AddTodoForm({ onAdd }: AddTodoFormProps) {
             className={clsx(
               'text-xs px-3 py-1.5 rounded-lg border font-medium transition',
               opt.color,
-              priority === opt.value ? 'ring-2 ring-offset-1 ring-indigo-400 scale-105' : 'opacity-60 hover:opacity-100'
+              priority === opt.value ? 'ring-2 ring-offset-1 ring-red-400 scale-105' : 'opacity-60 hover:opacity-100'
             )}
           >
             {opt.label}

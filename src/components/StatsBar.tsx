@@ -14,7 +14,7 @@ export default function StatsBar({ activeCount, completedCount }: StatsBarProps)
         <p className="text-xs text-gray-500 mt-0.5">Total</p>
       </div>
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4 text-center">
-        <p className="text-2xl font-bold text-indigo-600">{activeCount}</p>
+        <p className="text-2xl font-bold text-red-600">{activeCount}</p>
         <p className="text-xs text-gray-500 mt-0.5">Active</p>
       </div>
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4 text-center">

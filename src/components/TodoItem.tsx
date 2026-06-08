@@ -47,7 +47,7 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemP
     <li
       className={clsx(
         'bg-white border rounded-2xl px-4 py-3 flex items-center gap-3 shadow-sm transition group',
-        todo.completed ? 'border-gray-100 opacity-70' : 'border-gray-200 hover:border-indigo-200 hover:shadow-md'
+        todo.completed ? 'border-gray-100 opacity-70' : 'border-gray-200 hover:border-red-200 hover:shadow-md'
       )}
     >
       {/* Checkbox */}
@@ -56,8 +56,8 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemP
         className={clsx(
           'w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition',
           todo.completed
-            ? 'bg-indigo-500 border-indigo-500 text-white'
-            : 'border-gray-300 hover:border-indigo-400'
+            ? 'bg-red-500 border-red-500 text-white'
+            : 'border-gray-300 hover:border-red-400'
         )}
         aria-label="Toggle complete"
       >
@@ -72,7 +72,7 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemP
             value={editText}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEditText(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="w-full border border-indigo-300 rounded-lg px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="w-full border border-red-300 rounded-lg px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-400"
           />
         ) : (
           <span
@@ -118,7 +118,7 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemP
           <>
             <button
               onClick={() => { setEditing(true); setEditText(todo.text); }}
-              className="p-1.5 rounded-lg text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 transition"
+              className="p-1.5 rounded-lg text-gray-400 hover:text-red-600 hover:bg-red-50 transition"
               aria-label="Edit todo"
             >
               <Pencil size={15} />

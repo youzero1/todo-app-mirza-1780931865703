@@ -20,11 +20,11 @@ export default function TodoPage() {
   } = useTodos();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-10 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-rose-50 py-10 px-4">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-3 mb-8">
-          <div className="bg-indigo-600 text-white p-2 rounded-xl">
+          <div className="bg-red-600 text-white p-2 rounded-xl">
             <CheckSquare size={28} />
           </div>
           <div>
